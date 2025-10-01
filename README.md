@@ -16,12 +16,12 @@ If ScalaTest has saved you time, helped you ship better software, or become a ke
 
 **Usage**
 
-To use it for ScalaTest 3.2.19 and JUnit 5.13:
+To use it for ScalaTest 3.2.19 and JUnit 5.14:
 
 SBT:
 
 ```
-libraryDependencies += "org.scalatestplus" %% "junit-5-13" % "3.2.19.0" % Test
+libraryDependencies += "org.scalatestplus" %% "junit-5-14" % "3.2.19.0" % Test
 ```
 
 Maven:
@@ -29,7 +29,7 @@ Maven:
 ```
 <dependency>
   <groupId>org.scalatestplus</groupId>
-  <artifactId>junit-5-13_3</artifactId>
+  <artifactId>junit-5-14_3</artifactId>
   <version>3.2.19.0</version>
   <scope>test</scope>
 </dependency>
@@ -42,9 +42,9 @@ dependencies {
     implementation "org.scala-lang:scala3-library:3.3.5"
 
     testImplementation "org.scalatest:scalatest_3:3.2.19"
-    testImplementation "org.junit.platform:junit-platform-launcher:1.13.1"
-    testRuntimeOnly "org.junit.platform:junit-platform-engine:1.13.1"
-    testRuntimeOnly "org.scalatestplus:junit-5-13_3:3.2.19.0"
+    testImplementation "org.junit.platform:junit-platform-launcher:1.14.0"
+    testRuntimeOnly "org.junit.platform:junit-platform-engine:1.14.0"
+    testRuntimeOnly "org.scalatestplus:junit-5-14_3:3.2.19.0"
 }
 
 test {
@@ -64,9 +64,9 @@ dependencies {
     implementation("org.scala-lang:scala3-library:3.3.5")
 
     testImplementation("org.scalatest:scalatest_3:3.2.19")
-    testRuntimeOnly("org.junit.platform:junit-platform-engine:1.13.1")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.13.1")
-    testRuntimeOnly("org.scalatestplus:junit-5-13_3:3.2.19.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-engine:1.14.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.14.0")
+    testRuntimeOnly("org.scalatestplus:junit-5-14_3:3.2.19.0")
 }
 
 tasks {

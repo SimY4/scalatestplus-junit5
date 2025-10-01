@@ -1,7 +1,7 @@
 import java.io.PrintWriter
 import scala.io.Source
 
-name := "junit-5.13"
+name := "junit-5.14"
 
 organization := "org.scalatestplus"
 
@@ -32,7 +32,7 @@ crossScalaVersions := List(
   "2.11.12",
   "2.12.20",
   "2.13.16",
-  "3.3.5"
+  "3.3.6"
 )
 
 scalacOptions ++= Seq("-target:jvm-1.8")
@@ -47,8 +47,8 @@ Compile / unmanagedSourceDirectories ++= {
 }
 
 val scalatestVersion = "3.2.19"
-val junitVersion = "5.13.1"
-val junitEngineVersion = "1.13.1"
+val junitVersion = "5.14.0"
+val junitEngineVersion = "1.14.0"
 
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest-core" % scalatestVersion,
@@ -98,7 +98,7 @@ OsgiKeys.exportPackage := Seq(
 
 OsgiKeys.importPackage := Seq(
   "org.scalatest.*",
-  "org.scalactic.*", 
+  "org.scalactic.*",
   "scala.*;version=\"$<range;[==,=+);$<replace;"+scalaBinaryVersion.value+";-;.>>\"",
   "*;resolution:=optional"
 )
@@ -167,6 +167,6 @@ Compile / doc  := docTask((Compile / doc).value,
                           (Compile / sourceDirectory).value,
                           name.value)
 
-Compile / doc / scalacOptions := Seq("-doc-title", s"ScalaTest + JUnit5 ${version.value}", 
-                                       "-sourcepath", baseDirectory.value.getAbsolutePath(), 
+Compile / doc / scalacOptions := Seq("-doc-title", s"ScalaTest + JUnit5 ${version.value}",
+                                       "-sourcepath", baseDirectory.value.getAbsolutePath(),
                                        "-doc-source-url", s"https://github.com/scalatest/releases-source/blob/main/scalatestplus-junit5/${version.value}€{FILE_PATH}.scala")

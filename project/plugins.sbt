@@ -1,3 +1,2 @@
-addSbtPlugin("com.jsuereth" % "sbt-pgp" % "2.0.1")
-
-addSbtPlugin("com.typesafe.sbt" % "sbt-osgi" % "0.9.6")
+addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
+addSbtPlugin("com.github.sbt" % "sbt-osgi" % "0.9.11")
