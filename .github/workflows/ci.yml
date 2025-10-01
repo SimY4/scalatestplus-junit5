@@ -6,12 +6,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup JDK
-      uses: actions/setup-java@v3
-      with:
-        distribution: temurin
-        java-version: 8
-    - name: Build and Test
-      run: sbt -v +test
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 8
+          cache: sbt
+      - name: Install sbt
+        uses: sbt/setup-sbt@v1
+      - name: Build and Test
+        run: sbt -v +test
